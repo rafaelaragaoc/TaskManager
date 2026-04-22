@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5AA1FC2F1868F500CA07EB /* SwiftFlowManager in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5AA1FB2F1868F500CA07EB /* SwiftFlowManager */; };
 		1CE0555C2E5E5323001A9DD9 /* AppRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE0555B2E5E5323001A9DD9 /* AppRouter */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5AA1FC2F1868F500CA07EB /* SwiftFlowManager in Frameworks */,
 				1CE0555C2E5E5323001A9DD9 /* AppRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +149,7 @@
 			name = TaskManager;
 			packageProductDependencies = (
 				1CE0555B2E5E5323001A9DD9 /* AppRouter */,
+				1C5AA1FB2F1868F500CA07EB /* SwiftFlowManager */,
 			);
 			productName = TaskManager;
 			productReference = 1C78E0EE2E44BE43002EB6FD /* TaskManager.app */;
@@ -230,6 +233,9 @@
 			);
 			mainGroup = 1C78E0E52E44BE43002EB6FD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1C5AA1FA2F1868F500CA07EB /* XCRemoteSwiftPackageReference "SwiftFlowManager" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1C78E0EF2E44BE43002EB6FD /* Products */;
 			projectDirPath = "";
@@ -311,6 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YX4K9Z3D4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YX4K9Z3D4N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -594,7 +602,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		1C5AA1FA2F1868F500CA07EB /* XCRemoteSwiftPackageReference "SwiftFlowManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rafaelaragaoc/SwiftFlowManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		1C5AA1FB2F1868F500CA07EB /* SwiftFlowManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C5AA1FA2F1868F500CA07EB /* XCRemoteSwiftPackageReference "SwiftFlowManager" */;
+			productName = SwiftFlowManager;
+		};
 		1CE0555B2E5E5323001A9DD9 /* AppRouter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppRouter;

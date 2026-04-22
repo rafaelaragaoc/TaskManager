@@ -1,30 +1,36 @@
 import SwiftUI
+//import AppRouter
 import AppRouterInterface
+import SwiftFlowManager
 
 public struct TasksView: View {
     @ObservedObject var viewModel = TasksViewModel()
-    var appRouter: any AppRouterInterface
+//    @EnvironmentObject private var coordinator: AppCoordinator
+//    var appRouter: any AppRouterInterface
     
     public var body: some View {
-            VStack {
-                Text("Hello, World!")
-            }
-            .navigationTitle("Tarefas")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add") {
-                        appRouter.route(to: .pomodoro)
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        // Action for the Settings button
-                    } label: {
-                        Image(systemName: "gearshape.fill")
-                    }
+        VStack {
+            Text("Hello, World!")
+        }
+        .navigationTitle("Tarefas")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Add") {
+//                    appRouter.route(to: .pomodoro)
                 }
             }
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+//                    viewModel.router.route(to: .taskDetail(1))
+                } label: {
+                    Image(systemName: "gearshape.fill")
+                }
+            }
+        }
+        .navigationDestination(for: TasksRoutes.self, destination: { route in
+            TaskDetailView()
+        })
         .onAppear {
             viewModel.onAppear()
         }
@@ -37,12 +43,12 @@ public class TasksViewFactory {
     }
     
     @MainActor public func build(router: any AppRouterInterface) -> TasksView {
-        .init(appRouter: router)
+        .init()
     }
 }
 
 
 #Preview {
-//    TasksView( appRouter: <#any AppRouterInterface#>)
+    //    TasksView( appRouter: <#any AppRouterInterface#>)
 }
 

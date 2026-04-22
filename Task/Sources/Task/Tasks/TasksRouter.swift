@@ -7,22 +7,17 @@
 
 import SwiftUI
 
-enum TasksRoutes {
-    case pomodoro
-    case tasksList
+enum TasksRoutes: Hashable {
     case taskDetail(Int)
 }
 
 final class TasksRouter {
-    func route(to route: TasksRoutes) -> some View {
-        
-        switch route {
-        case .pomodoro:
-            Text("Pomodoro")
-        case .tasksList:
-            Text("Tasks List")
-        case .taskDetail(let id):
-            Text("Task Detail \(id)")
-        }
+    var path = [TasksRoutes]()
+    func route(to route: TasksRoutes) {
+        path.append( route )
+//        switch route {
+//        case .taskDetail(let id):
+//            Text("Task Detail \(id)")
+//        }
     }
 }

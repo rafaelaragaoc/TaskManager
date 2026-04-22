@@ -1,0 +1,15 @@
+{
+  "originHash" : "b538800129190605ac3f4ced5cb4363ec2f7a5af8535e679f91f7c31e4cbff34",
+  "pins" : [
+    {
+      "identity" : "swiftflowmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rafaelaragaoc/SwiftFlowManager.git",
+      "state" : {
+        "revision" : "78c3f126fe5c89880c26222dae7be861e7f41b8b",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

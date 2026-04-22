@@ -1,6 +1,6 @@
 import Foundation
 
-final class TaskDetailViewModel: ObservableObject {
+public final class TaskDetailViewModel: ObservableObject {
     @Published var title: String = "Hello MVVM"
 
     func onAppear() {
